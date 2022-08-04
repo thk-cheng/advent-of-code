@@ -6,7 +6,7 @@ def read_input(file_path: str) -> list[str]:
 
 
 def find_total_sa(dimensions: list[str]) -> int:
-    '''Find total surface area of wrapping paper'''
+    '''Find total square feet of wrapping paper needed'''
     total_sa = 0
     for d in dimensions:
         l, w, h = d.split("x")
