@@ -9,6 +9,7 @@ def read_input(file_path: str) -> str:
 
 
 def md5_smallest(input_string: str, no_of_zeros: int) -> int:
+    '''Find the smallest positive integer that output the desired md5 hash'''
     number = 1
     while True:
         hash_input = bytes(f"{input_string}{number}", "utf-8")
