@@ -6,7 +6,7 @@ def read_input(file_path: str) -> str:
 
 
 def find_first_basement_position(instructions: str) -> int:
-    '''Infer the floor number from the instructions'''
+    '''Find the first position such that floor = -1, i.e. at the basement'''
     floor = 0
     for pos, p in enumerate(instructions, start=1):
         if p == "(":
