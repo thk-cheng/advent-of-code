@@ -32,7 +32,10 @@ def build_circuit(instructions: list[str], nob: int) -> dict[str, int]:
         if len(wiring) == 1:
             wiring = wiring[0]
             if is_number(wiring):
-                circuit[e] = int(wiring)
+                if e == "b":
+                    circuit[e] = 16076
+                else:
+                    circuit[e] = int(wiring)
             else:
                 circuit[e] = circuit[wiring]
         else:
