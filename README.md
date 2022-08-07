@@ -9,8 +9,8 @@ Solutions to the problems on Advent of Code in Python
 - [Day 05](2015/day_05) [[Part 01](2015/day_05/day_05_solution_part_01.py) | [Part 02](2015/day_05/day_05_solution_part_02.py)]
 - [Day 06](2015/day_06) [[Part 01](2015/day_06/day_06_solution_part_01.py) | [Part 02](2015/day_06/day_06_solution_part_02.py)]
 - [Day 07](2015/day_07) [[Part 01](2015/day_07/day_07_solution_part_01.py) | [Part 02](2015/day_07/day_07_solution_part_02.py)]
-<!--
 - [Day 08](2015/day_08) [[Part 01](2015/day_08/day_08_solution_part_01.py) | [Part 02](2015/day_08/day_08_solution_part_02.py)]
+<!--
 - [Day 09](2015/day_09) [[Part 01](2015/day_09/day_09_solution_part_01.py) | [Part 02](2015/day_09/day_09_solution_part_02.py)]
 - [Day 10](2015/day_10) [[Part 01](2015/day_10/day_10_solution_part_01.py) | [Part 02](2015/day_10/day_10_solution_part_02.py)]
 - [Day 11](2015/day_11) [[Part 01](2015/day_11/day_11_solution_part_01.py) | [Part 02](2015/day_11/day_11_solution_part_02.py)]
