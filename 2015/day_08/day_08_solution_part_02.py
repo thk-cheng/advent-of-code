@@ -8,26 +8,28 @@ def read_input(file_path: str) -> list[list[str]]:
 def count_char(strings: list[str]) -> int:
     '''Count no. of char for string literals - no. of char in memory'''
     total_code_cnt = 0
-    total_mem_cnt = 0
+    total_new_code_cnt = 0
     for s in strings:
         # the extra 2 accounts for the open & end quotations
         total_code_cnt += (len(s) + 2)
+        # the 6 characters comes from "\"\"", which every string must have
+        total_new_code_cnt += 6
         idx = 0
         while idx < len(s):
             if s[idx] == "\\":
-                if s[idx+1] == "x":
-                    # e.g. "\x27", increase count by 1 and jump the idx by 4
-                    total_mem_cnt += 1
-                    idx += 4
-                else:
-                    # e.g. "aa\"aa", increase count by 1 and jump the idx by 2
-                    total_mem_cnt += 1
+                if s[idx+1] != "x":
+                    # 2 for \\, the other 2 for the escape char and symbol, e.g. \" 
+                    total_new_code_cnt += 4
                     idx += 2
+                else:
+                    # 2 for \\
+                    total_new_code_cnt += 2
+                    idx += 1
             else:
-                # In all other cases, there is nothing to escape so increase count by 1 for each character
-                total_mem_cnt += 1
+                # In other case, just add the length of characters
+                total_new_code_cnt += len(s[idx])
                 idx += 1
-    return total_code_cnt - total_mem_cnt
+    return total_new_code_cnt - total_code_cnt
 
 
 def main() -> None:
